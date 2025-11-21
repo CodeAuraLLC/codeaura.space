@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CodeAura – Clean AI-Powered Apps & Automations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CodeAura builds sleek AI-powered web apps, automations, and tools with a modern neon-aura aesthetic."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      
+      <!-- Top navigation -->
+      <header class="nav">
+        <div class="nav-left">
+          <img src="codeaura-logo.png" alt="CodeAura logo" class="logo-img" />
+          <span class="brand-name">CodeAura</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact" class="nav-cta">Work with us</a>
+        </nav>
+      </header>
+
+      <!-- Hero section -->
+      <main class="hero">
+        <div class="hero-text">
+          <p class="pill">
+            <span class="pill-dot"></span>
+            AI-powered, vibe-coded products.
+          </p>
+          <h1>
+            Code that <span class="hero-gradient">glows</span>.<br />
+            Products that actually ship.
+          </h1>
+          <p>
+            CodeAura builds modern, AI-powered apps and automations with a clean
+            neon-aura aesthetic. From idea to launch, we help you ship tools
+            that look good and actually work.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="primary-btn">Start a project</a>
+            <a href="#projects" class="ghost-btn">See what we’ve built</a>
+          </div>
+          <p class="hero-tagline">
+            Available for SaaS MVPs, landing pages, and custom automations.
+          </p>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="codeaura-logo.png"
+            alt="CodeAura logo"
+            class="hero-logo-img"
+          />
+          <h2>CozyReply.ai</h2>
+          <p>
+            Airbnb guest-reply automation powered by CodeAura’s stack and brand
+            system.
+          </p>
+          <ul>
+            <li>AI-generated, host-friendly replies</li>
+            <li>Rules + tone saved for your listing</li>
+            <li>Stripe subscriptions ready</li>
+          </ul>
+        </div>
+      </main>
+
+      <!-- Services section -->
+      <section id="services" class="section">
+        <h2>What CodeAura builds</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>SaaS MVPs</h3>
+            <p>
+              Launch-ready web apps with auth, billing, dashboards, and clean
+              UX.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Automation & AI</h3>
+            <p>
+              Gemini + Stripe powered tools that do work while you sleep.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Brand & Frontend</h3>
+            <p>
+              Modern, neon-aura landing pages that feel premium and convert.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section id="projects" class="section">
+        <h2>Signature Projects</h2>
+
+        <!-- CozyReply Project Card -->
+        <div class="project-card cozyreply-card">
+          <img src="cozyreply-logo.png" class="cozyreply-logo" alt="CozyReply logo" />
+
+          <h3>CozyReply.online</h3>
+          <p>
+            CodeAura’s flagship automation tool for Airbnb hosts. CozyReply uses
+            custom prompts, tone presets, and smart message context to generate
+            instant guest replies — warm, friendly, and always aligned with
+            your house rules.
+          </p>
+
+          <ul>
+            <li>Instant Gemini-powered guest replies</li>
+            <li>Custom tone + rules saved for your listing</li>
+            <li>Stripe billing (Basic & Pro tiers)</li>
+            <li>Clean UI + full brand system by CodeAura LLC</li>
+          </ul>
+
+          <a href="https://cozyreply.online" target="_blank" class="project-btn">
+            Visit CozyReply →
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <h2>Let’s build your next product</h2>
+        <p>
+          Ready to turn an idea into a working app or automation? Drop your
+          email and a sentence about what you want to build.
+        </p>
+
+        <form class="contact-form">
+          <input type="email" placeholder="your@email.com" required />
+          <textarea
+            placeholder="Tell CodeAura what you want to build…"
+            rows="3"
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <p class="contact-note">
+          Form is visual only — we’ll wire it up after hosting.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <span>
+          © <span id="year"></span> CodeAura LLC. All rights reserved.
+        </span>
+      </footer>
+
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
