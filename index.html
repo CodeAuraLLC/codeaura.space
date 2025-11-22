@@ -29,7 +29,7 @@
 
       <!-- Hero section -->
       <main class="hero">
-        <div class="hero-text">
+        <div class="hero-text animate-in">
           <p class="pill">
             <span class="pill-dot"></span>
             AI-powered, vibe-coded products.
@@ -52,7 +52,7 @@
           </p>
         </div>
 
-        <div class="hero-card">
+        <div class="hero-card animate-in delay-1">
           <img
             src="codeaura-logo.png"
             alt="CodeAura logo"
@@ -72,7 +72,7 @@
       </main>
 
       <!-- About section -->
-      <section id="about" class="section about">
+      <section id="about" class="section about animate-in">
         <h2>About CodeAura</h2>
         <div class="about-grid">
           <div class="about-copy">
@@ -107,7 +107,7 @@
       </section>
 
       <!-- Services section -->
-      <section id="services" class="section">
+      <section id="services" class="section animate-in delay-1">
         <h2>Services</h2>
         <p class="section-lead">
           Think of CodeAura as your plug-in product studio. We handle idea → UX
@@ -139,7 +139,7 @@
       </section>
 
       <!-- Projects / Portfolio section -->
-      <section id="projects" class="section">
+      <section id="projects" class="section animate-in">
         <h2>Projects</h2>
 
         <!-- CozyReply Project Card -->
@@ -171,7 +171,7 @@
         </div>
 
         <!-- Placeholder for future projects -->
-        <div class="project-card">
+        <div class="project-card animate-in delay-1">
           <h3>Your project here</h3>
           <p>
             Need a small SaaS, automation, or AI-powered tool? This slot is
@@ -186,7 +186,7 @@
       </section>
 
       <!-- Request a Quote (instead of pricing) -->
-      <section id="quote" class="section quote">
+      <section id="quote" class="section quote animate-in">
         <h2>Request a project quote</h2>
         <p class="section-lead">
           No pricing table, no surprises. Tell CodeAura what you want to build,
@@ -211,7 +211,7 @@
               <option value="">Rough budget</option>
               <option value="under1k">Under $1,000</option>
               <option value="1-3k">$1,000 – $3,000</option>
-              <option value="3-5k">$3,000 – $5,000</option>
+              <option value="3-5k">$1,000 – $3,000</option>
               <option value="5kplus">$5,000+</option>
             </select>
           </div>
@@ -240,7 +240,7 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="section contact">
+      <section id="contact" class="section contact animate-in">
         <h2>Contact</h2>
         <p>
           Want to chat before a quote, or ask if your idea is a fit? Drop a
@@ -270,7 +270,27 @@
     </div>
 
     <script>
+      // Footer year
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll animations
+      const animatedEls = document.querySelectorAll(".animate-in");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.18,
+        }
+      );
+
+      animatedEls.forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
