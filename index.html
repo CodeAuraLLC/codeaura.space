@@ -4,13 +4,41 @@
     <meta charset="utf-8" />
     <title>CodeAura – Clean AI-Powered Apps & Automations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Basic SEO -->
     <meta
       name="description"
-      content="CodeAura builds sleek AI-powered web apps, automations, and tools with a modern neon-aura aesthetic."
+      content="CodeAura is a small studio that builds sleek AI-powered web apps, automations, and tools with a modern neon-aura aesthetic."
     />
+    <link rel="canonical" href="https://codeaura.space/" />
+    <meta name="theme-color" content="#020617" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codeaura.space/" />
+    <meta property="og:title" content="CodeAura – Clean AI-Powered Apps & Automations" />
+    <meta
+      property="og:description"
+      content="Neon-glow web apps, AI automations, and small SaaS projects, built and shipped by CodeAura."
+    />
+    <!-- Put a real image named social-card.png in your repo root for this -->
+    <meta property="og:image" content="https://codeaura.space/social-card.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CodeAura – Clean AI-Powered Apps & Automations" />
+    <meta
+      name="twitter:description"
+      content="Neon-glow web apps, AI automations, and small SaaS tools – designed and built by CodeAura."
+    />
+    <meta name="twitter:image" content="https://codeaura.space/social-card.png" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Cursor trail layer -->
+    <div class="cursor-layer"></div>
+
     <div class="page">
       <!-- Top navigation -->
       <header class="nav">
@@ -18,10 +46,21 @@
           <img src="codeaura-logo.png" alt="CodeAura logo" class="logo-img" />
           <span class="brand-name">CodeAura</span>
         </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
         <nav class="nav-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
           <a href="#quote">Quote</a>
           <a href="#contact" class="nav-cta">Contact</a>
         </nav>
@@ -175,6 +214,44 @@
         </div>
       </section>
 
+      <!-- Blog section -->
+      <section id="blog" class="section animate-in">
+        <h2>Blog</h2>
+        <p class="section-lead">
+          Occasional notes on AI tools, shipping small products, and running
+          tiny studios.
+        </p>
+
+        <div class="grid blog-grid">
+          <article class="card blog-card">
+            <h3>Designing AI tools that don’t feel like bots</h3>
+            <p>
+              Thoughts on writing prompts, guardrails, and UI so that AI feels
+              like a helpful co-worker instead of a glitchy chatbot.
+            </p>
+            <span class="blog-meta">Coming soon · Studio notes</span>
+          </article>
+
+          <article class="card blog-card">
+            <h3>From idea to MVP: scoping small on purpose</h3>
+            <p>
+              How CodeAura approaches first versions: ruthless scoping, a clear
+              “done” line, and shipping something real instead of perfect.
+            </p>
+            <span class="blog-meta">Coming soon · Process</span>
+          </article>
+
+          <article class="card blog-card">
+            <h3>Why neon UI can still feel clean</h3>
+            <p>
+              Using glow, gradients, and dark backgrounds without sacrificing
+              legibility, speed, or focus on the actual product.
+            </p>
+            <span class="blog-meta">Coming soon · Design</span>
+          </article>
+        </div>
+      </section>
+
       <!-- Quote -->
       <section id="quote" class="section quote animate-in">
         <h2>Request a project quote</h2>
@@ -183,18 +260,26 @@
           build.
         </p>
 
-        <!-- UPDATED QUOTE FORM BELOW -->
         <form
           class="quote-form"
           action="https://formsubmit.co/contact@codeaura.space"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="New project quote from CodeAura" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New project quote from CodeAura"
+          />
           <input type="hidden" name="_template" value="table" />
 
           <div class="field-row">
             <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
           </div>
 
           <div class="field-row">
@@ -244,16 +329,24 @@
           Want to chat before a quote? Drop a message here.
         </p>
 
-        <!-- UPDATED CONTACT FORM BELOW -->
         <form
           class="contact-form"
           action="https://formsubmit.co/contact@codeaura.space"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="New contact form message (CodeAura)" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New contact form message (CodeAura)"
+          />
           <input type="hidden" name="_template" value="table" />
 
-          <input type="email" name="email" placeholder="your@email.com" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          />
           <textarea
             name="message"
             placeholder="Say hi or ask a quick question…"
@@ -275,7 +368,11 @@
       </footer>
     </div>
 
+    <!-- Floating “Request a quote” button -->
+    <a href="#quote" class="floating-cta">Request a quote</a>
+
     <script>
+      // Footer year
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Scroll animations
@@ -296,6 +393,41 @@
       );
 
       animatedEls.forEach((el) => observer.observe(el));
+
+      // Mobile nav toggle
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = document.body.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (document.body.classList.contains("nav-open")) {
+              document.body.classList.remove("nav-open");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
+
+      // Cursor trail
+      const cursorLayer = document.querySelector(".cursor-layer");
+
+      document.addEventListener("pointermove", (e) => {
+        if (!cursorLayer) return;
+        const dot = document.createElement("span");
+        dot.className = "cursor-dot";
+        dot.style.left = `${e.clientX}px`;
+        dot.style.top = `${e.clientY}px`;
+        cursorLayer.appendChild(dot);
+        setTimeout(() => {
+          dot.remove();
+        }, 550);
+      });
     </script>
   </body>
 </html>
