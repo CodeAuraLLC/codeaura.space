@@ -66,6 +66,7 @@ body {
   align-items: center;
   gap: 18px;
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -284,6 +285,59 @@ body {
   font-size: 20px;
 }
 
+.section-lead {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* About */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.about-copy {
+  flex: 1 1 260px;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.about-copy p {
+  margin: 0 0 10px;
+}
+
+.about-highlights {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pill-stat {
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 13px;
+}
+
+.pill-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 2px;
+}
+
+.pill-value {
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+/* Grid / cards / projects */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -324,6 +378,7 @@ body {
   position: relative;
   padding-top: 28px;
   overflow: hidden;
+  margin-bottom: 16px;
 }
 
 .cozyreply-card::before {
@@ -375,6 +430,55 @@ body {
   box-shadow: 0 18px 40px rgba(255, 94, 91, 0.55);
 }
 
+/* Quote (request a quote) */
+.quote p {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
+  margin-top: 8px;
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select {
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 10px 12px;
+  color: #e5e7eb;
+  font-size: 14px;
+  flex: 1 1 160px;
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: #6b7280;
+}
+
+.quote-form button {
+  align-self: flex-start;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 16px;
+  background: linear-gradient(135deg, #38bdf8, #a855f7);
+  color: #0b1120;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+}
+
 /* Contact */
 .contact p {
   font-size: 14px;
@@ -420,6 +524,11 @@ body {
   margin-top: 6px;
   font-size: 12px;
   color: #9ca3af;
+}
+
+.contact-email {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 /* Footer */
@@ -478,5 +587,13 @@ body {
 
   .hero-card {
     max-width: 100%;
+  }
+
+  .about-grid {
+    flex-direction: column;
+  }
+
+  .field-row {
+    flex-direction: column;
   }
 }

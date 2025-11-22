@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="page">
-      
       <!-- Top navigation -->
       <header class="nav">
         <div class="nav-left">
@@ -20,9 +19,11 @@
           <span class="brand-name">CodeAura</span>
         </div>
         <nav class="nav-links">
+          <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
-          <a href="#contact" class="nav-cta">Work with us</a>
+          <a href="#quote">Quote</a>
+          <a href="#contact" class="nav-cta">Contact</a>
         </nav>
       </header>
 
@@ -43,11 +44,11 @@
             that look good and actually work.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="primary-btn">Start a project</a>
-            <a href="#projects" class="ghost-btn">See what we’ve built</a>
+            <a href="#quote" class="primary-btn">Request a quote</a>
+            <a href="#projects" class="ghost-btn">See our work</a>
           </div>
           <p class="hero-tagline">
-            Available for SaaS MVPs, landing pages, and custom automations.
+            Available for SaaS MVPs, landing pages, and custom AI automations.
           </p>
         </div>
 
@@ -64,45 +65,90 @@
           </p>
           <ul>
             <li>AI-generated, host-friendly replies</li>
-            <li>Rules + tone saved for your listing</li>
+            <li>Rules + tone saved for each listing</li>
             <li>Stripe subscriptions ready</li>
           </ul>
         </div>
       </main>
 
+      <!-- About section -->
+      <section id="about" class="section about">
+        <h2>About CodeAura</h2>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              CodeAura is a tiny studio that builds <strong>clean, opinionated
+              web apps</strong> and automations. No bloated dashboards, no
+              boring templates — just focused tools that feel good to use and
+              are simple to maintain.
+            </p>
+            <p>
+              We love glowing interfaces, clear copy, and products that are
+              actually shippable in weeks, not years. If you’ve got an idea for
+              a tool, SaaS, or workflow, we’ll help you design it, build it, and
+              launch it.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="pill-stat">
+              <span class="pill-label">Focus</span>
+              <span class="pill-value">AI products & small SaaS</span>
+            </div>
+            <div class="pill-stat">
+              <span class="pill-label">Stack</span>
+              <span class="pill-value">Python · Flask · Gemini · Stripe</span>
+            </div>
+            <div class="pill-stat">
+              <span class="pill-label">Style</span>
+              <span class="pill-value">Neon, minimal, conversion-focused</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Services section -->
       <section id="services" class="section">
-        <h2>What CodeAura builds</h2>
+        <h2>Services</h2>
+        <p class="section-lead">
+          Think of CodeAura as your plug-in product studio. We handle idea → UX
+          → code → launch.
+        </p>
         <div class="grid">
           <div class="card">
             <h3>SaaS MVPs</h3>
             <p>
-              Launch-ready web apps with auth, billing, dashboards, and clean
-              UX.
+              Launch-ready web apps with login, billing, dashboards, and a clean
+              UI. Perfect for validating ideas, indie SaaS, and internal tools.
             </p>
           </div>
           <div class="card">
             <h3>Automation & AI</h3>
             <p>
-              Gemini + Stripe powered tools that do work while you sleep.
+              Gemini-powered tools, message generators, content workflows, and
+              Stripe-connected automations that quietly work in the background.
             </p>
           </div>
           <div class="card">
             <h3>Brand & Frontend</h3>
             <p>
-              Modern, neon-aura landing pages that feel premium and convert.
+              Modern, neon-aura landing pages, branding systems, and UI that
+              makes your product feel premium from day one.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Projects section -->
+      <!-- Projects / Portfolio section -->
       <section id="projects" class="section">
-        <h2>Signature Projects</h2>
+        <h2>Projects</h2>
 
         <!-- CozyReply Project Card -->
         <div class="project-card cozyreply-card">
-          <img src="cozyreply-logo.png" class="cozyreply-logo" alt="CozyReply logo" />
+          <img
+            src="cozyreply-logo.png"
+            class="cozyreply-logo"
+            alt="CozyReply logo"
+          />
 
           <h3>CozyReply.online</h3>
           <p>
@@ -114,36 +160,105 @@
 
           <ul>
             <li>Instant Gemini-powered guest replies</li>
-            <li>Custom tone + rules saved for your listing</li>
+            <li>Custom tone + rules saved per listing</li>
             <li>Stripe billing (Basic & Pro tiers)</li>
-            <li>Clean UI + full brand system by CodeAura LLC</li>
+            <li>Brand, UX, and build by CodeAura LLC</li>
           </ul>
 
           <a href="https://cozyreply.online" target="_blank" class="project-btn">
             Visit CozyReply →
           </a>
         </div>
+
+        <!-- Placeholder for future projects -->
+        <div class="project-card">
+          <h3>Your project here</h3>
+          <p>
+            Need a small SaaS, automation, or AI-powered tool? This slot is
+            reserved for the next thing we ship together.
+          </p>
+          <ul>
+            <li>Custom scoped to your idea</li>
+            <li>Clear timeline + communication</li>
+            <li>Launch support included</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Request a Quote (instead of pricing) -->
+      <section id="quote" class="section quote">
+        <h2>Request a project quote</h2>
+        <p class="section-lead">
+          No pricing table, no surprises. Tell CodeAura what you want to build,
+          and we’ll send a simple, flat quote.
+        </p>
+
+        <form class="quote-form">
+          <div class="field-row">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+          </div>
+
+          <div class="field-row">
+            <select required>
+              <option value="">Project type</option>
+              <option value="saas">SaaS / web app</option>
+              <option value="automation">Automation / AI workflow</option>
+              <option value="landing">Landing page & branding</option>
+              <option value="other">Something else</option>
+            </select>
+            <select required>
+              <option value="">Rough budget</option>
+              <option value="under1k">Under $1,000</option>
+              <option value="1-3k">$1,000 – $3,000</option>
+              <option value="3-5k">$3,000 – $5,000</option>
+              <option value="5kplus">$5,000+</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <select required>
+              <option value="">Timeline</option>
+              <option value="asap">ASAP (2–3 weeks)</option>
+              <option value="month">This month</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+
+          <textarea
+            rows="4"
+            placeholder="Describe what you want to build, who it's for, and what 'done' looks like…"
+          ></textarea>
+
+          <button type="submit">Send quote request</button>
+        </form>
+
+        <p class="contact-note">
+          Form is visual only for now — once you’re ready, we can wire this up
+          to email or a CRM.
+        </p>
       </section>
 
       <!-- Contact -->
       <section id="contact" class="section contact">
-        <h2>Let’s build your next product</h2>
+        <h2>Contact</h2>
         <p>
-          Ready to turn an idea into a working app or automation? Drop your
-          email and a sentence about what you want to build.
+          Want to chat before a quote, or ask if your idea is a fit? Drop a
+          message here.
         </p>
 
         <form class="contact-form">
           <input type="email" placeholder="your@email.com" required />
           <textarea
-            placeholder="Tell CodeAura what you want to build…"
+            placeholder="Say hi, share a link, or drop a quick question…"
             rows="3"
           ></textarea>
-          <button type="submit">Send</button>
+          <button type="submit">Send message</button>
         </form>
 
         <p class="contact-note">
-          Form is visual only — we’ll wire it up after hosting.
+          Prefer email? Reach out at
+          <span class="contact-email">hello@codeaura.space</span> (placeholder).
         </p>
       </section>
 
@@ -152,7 +267,6 @@
           © <span id="year"></span> CodeAura LLC. All rights reserved.
         </span>
       </footer>
-
     </div>
 
     <script>
